@@ -70,21 +70,60 @@ header img{
 
 .listas{
     position: fixed;
-    top: 340px;
+    top: 350px;
     width: 100%;
-    left: 100px;
+    left: 86px;
     display: flex;
+   
+   
 }
 
-.listas h1{
-    font-size: 20px;
-    margin: 80px;
-    top: 10px;
-}
 .listas li{
-    font-size: 30px;
+    font-size: 23px;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 
 }
+.qualidade{
+    position: fixed;
+    top: 550px;
+    width: 100%;
+    left: 60px;
+    display: flex;
+   
+}
+.qualidade img{
+    padding: 30px;
+}
+.textoq{
+    position: fixed;
+    top: 650px;
+    display: flex;
+    font-size: 10px;
+}
+.textoq h1{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+.foto{
+    margin-left: 1210px;
+    
+}
+
+
+.footer {
+    padding: 25px;
+    background: rgba(54, 51, 51, 1);
+    width: 100%;
+    position: fixed;
+   
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: inherit;
+
+}
+
 
 
