@@ -45,7 +45,56 @@
     </footer>
 
 
+    <script>
 
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+
+        function validaCampos() {
+            if (email.value === "" || senha.value === "") {
+                alert('Email/Senha deve ser preenchido');
+                return false;
+            }
+
+            return true;
+        }
+
+        async function login() {
+            if (!validaCampos())
+                return;
+
+            const data = {
+                'email': email.value,
+                'senha': senha.value
+            }
+
+            try {
+                const resposta = await fetch("api/login", {
+                    method: "POST",
+                    body: data
+                });
+
+                const respJson = await resposta.json();
+
+                
+
+            } catch (error) {
+                if (resposta.status === 404) {
+                    alert(respJson.mensagem);
+                    return;
+                }
+                else{
+                    alert("Erro Inesperado!");
+                    return;
+
+                }
+            }
+
+
+        }
+
+
+    </script>
 
 
 </body>
