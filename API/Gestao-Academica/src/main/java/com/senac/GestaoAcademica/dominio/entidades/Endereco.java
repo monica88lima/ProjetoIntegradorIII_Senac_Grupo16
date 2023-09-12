@@ -18,14 +18,11 @@ public class Endereco {
     private String cidade;
     private String estado;
 
-    @OneToOne
-    @JoinColumn(name = "aluno_id")
-    private Aluno aluno;
-
     public  Endereco(){
     }
 
-    public Endereco(String logradouro, String numero, String complemento, String cep, String bairro, String cidade, String estado) {
+    public Endereco(String logradouro, String numero, String complemento, String cep, String bairro, String cidade,
+                    String estado){
         this.logradouro = logradouro;
         this.numero = numero;
         this.complemento = complemento;
