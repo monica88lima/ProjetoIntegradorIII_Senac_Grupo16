@@ -3,7 +3,7 @@ package com.senac.GestaoAcademica.dominio.entidades;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "usuarios")
+@Table(name = "alunos")
 public class Aluno extends PessoaFisica{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,14 +13,16 @@ public class Aluno extends PessoaFisica{
     private Double av2;
     private Double av3;
     private Double media;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "endereco_id")
+    private Endereco endereco;
     public Aluno(){
         super();
     }
 
-    public Aluno(Long id, String curso, String nomeCompleto, String cpf,
-                 String dataNascimento, String nomeMae, String nomePai, String email, String celular) {
+    public Aluno(String curso, String nomeCompleto, String cpf,
+                 String dataNascimento, String nomeMae, String nomePai, String email, String celular, Endereco endereco) {
         super( nomeCompleto, cpf, dataNascimento, nomeMae, nomePai, email, celular);
-        id = id;
         curso = curso;
         av1 = 0d;
         av2 = 0d;
@@ -68,4 +70,11 @@ public class Aluno extends PessoaFisica{
         return media;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 }

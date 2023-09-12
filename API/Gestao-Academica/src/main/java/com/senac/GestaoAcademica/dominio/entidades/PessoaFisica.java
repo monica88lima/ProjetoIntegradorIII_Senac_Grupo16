@@ -1,8 +1,11 @@
 package com.senac.GestaoAcademica.dominio.entidades;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
 public class PessoaFisica {
+
     private String nomeCompleto;
     private String cpf;
     private String dataNascimento;
@@ -10,9 +13,12 @@ public class PessoaFisica {
     private String nomePai;
     private String email;
     private String celular;
+    //private Endereco endereco;
+
     public PessoaFisica(){
     }
-    public PessoaFisica(String nomeCompleto, String cpf, String dataNascimento, String nomeMae, String nomePai, String email, String celular) {
+    public PessoaFisica(String nomeCompleto, String cpf, String dataNascimento, String nomeMae, String nomePai,
+                        String email, String celular){//}, Endereco endereco) {
         this.nomeCompleto = nomeCompleto;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -20,6 +26,7 @@ public class PessoaFisica {
         this.nomePai = nomePai;
         this.email = email;
         this.celular = celular;
+        //this.endereco = endereco;
     }
 
     public String getNomeCompleto() {
@@ -77,4 +84,5 @@ public class PessoaFisica {
     public void setCelular(String celular) {
         this.celular = celular;
     }
+
 }

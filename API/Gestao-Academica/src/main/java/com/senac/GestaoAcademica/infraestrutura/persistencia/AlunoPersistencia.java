@@ -24,7 +24,7 @@ public class AlunoPersistencia implements IntefaceAluno {
 
     @Override
     public Aluno buscarAluno(Long id) {
-        return alunoRepository.getReferenceById(id);
+        return alunoRepository.findById(id).get();
     }
     @Override
     public Aluno criarAluno(Aluno aluno) {
