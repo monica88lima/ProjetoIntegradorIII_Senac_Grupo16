@@ -15,14 +15,12 @@ public class PessoaFisica {
     private String nomePai;
     private String email;
     private String celular;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Endereco endereco;
 
     public PessoaFisica(){
     }
-    public PessoaFisica(Long id, String nomeCompleto, String cpf, String dataNascimento, String nomeMae, String nomePai,
-                        String email, String celular, Endereco endereco) {
-        this.id =id;
+    public PessoaFisica(String nomeCompleto, String cpf, String dataNascimento, String nomeMae, String nomePai,
+                        String email, String celular){
+        //this.id =id;
         this.nomeCompleto = nomeCompleto;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -30,7 +28,6 @@ public class PessoaFisica {
         this.nomePai = nomePai;
         this.email = email;
         this.celular = celular;
-        this.endereco = endereco;
     }
 
     public Long getId() {
@@ -93,11 +90,4 @@ public class PessoaFisica {
         this.celular = celular;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
 }

@@ -53,14 +53,14 @@ public class AlunoServico {
                 throw  new RuntimeException("Não é permitido salvar um aluno nulo!");
             }
 
-            Aluno alunoDb = alunoPersistencia.buscarAluno(aluno.getId());
-            alunoDb.setNomeCompleto(aluno.getNomeCompleto());
-            alunoDb.setCpf(aluno.getCpf());
-            alunoDb.setDataNascimento(aluno.getDataNascimento());
-            alunoDb.setNomeMae(aluno.getNomeMae());
-            alunoDb.setNomePai(aluno.getNomePai());
-            alunoDb.setEmail(aluno.getEmail());
-            alunoDb.setCelular(aluno.getCelular());
+//            Aluno alunoDb = alunoPersistencia.buscarAluno(aluno.getId());
+//            alunoDb.setNomeCompleto(aluno.getNomeCompleto());
+//            alunoDb.setCpf(aluno.getCpf());
+//            alunoDb.setDataNascimento(aluno.getDataNascimento());
+//            alunoDb.setNomeMae(aluno.getNomeMae());
+//            alunoDb.setNomePai(aluno.getNomePai());
+//            alunoDb.setEmail(aluno.getEmail());
+//            alunoDb.setCelular(aluno.getCelular());
 
             alunoPersistencia.editarAluno(aluno);
             return aluno;

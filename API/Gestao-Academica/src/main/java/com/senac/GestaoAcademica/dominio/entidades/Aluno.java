@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "alunos")
-public class Aluno extends PessoaFisica{
+public class Aluno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,19 +13,22 @@ public class Aluno extends PessoaFisica{
     private Double av2;
     private Double av3;
     private Double media;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    private Endereco endereco;
+    @OneToOne(cascade = CascadeType.ALL)
+    private PessoaFisica pessoaFisica;
     public Aluno(){
         super();
     }
 
-    public Aluno(Long id, String curso, String nomeCompleto, String cpf,
-                 String dataNascimento, String nomeMae, String nomePai, String email, String celular, Endereco endereco) {
-        super( id,nomeCompleto, cpf, dataNascimento, nomeMae, nomePai, email, celular, endereco);
-        curso = curso;
+    public Aluno(String curso, String nomeCompleto, String cpf,
+                 String dataNascimento, String nomeMae, String nomePai, String email, String celular, Endereco endereco, PessoaFisica pessoaFisica){
         av1 = 0d;
         av2 = 0d;
         av3 = 0d;
         media = 0d;
+        this.endereco = endereco;
+        this.pessoaFisica = pessoaFisica;
     }
 
     public Long getId() {
@@ -68,4 +71,19 @@ public class Aluno extends PessoaFisica{
         return media;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public PessoaFisica getPessoaFisica() {
+        return pessoaFisica;
+    }
+
+    public void setPessoaFisica(PessoaFisica pessoaFisica) {
+        this.pessoaFisica = pessoaFisica;
+    }
 }
