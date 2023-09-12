@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualização Cadastral</title>
+    <link rel="icon" href="" />
+    <link rel="stylesheet" href="estilo_cadastroFornecedor.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;700&family=Montserrat:wght@300;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="conteinerA">
+        <header>
+            <div class="logo">
+                <img class="ImgLg" src="/Imagens/logo.png" alt="Logo">
+                <nav><img src="/Imagens/icons8-cardápio-50.png" alt="Menu"></nav>
+
+            </div>
+
+            <div class="titulo">
+                <h1>Atualização Cadastral</h1>
+
+            </div>
+            <div class="atalhoHome">
+                <span><a href="#Home">Página Inicial</a></span>
+                <span><a href="#Perfil">Perfil</a></span>
+
+            </div>
+
+
+            <div class="nome_tpPerfil">
+                <span class="circulo"><span>EL</span></span>
+                <span id="nomePerfil">Nome</span>
+                <span id="nomePerfil">Colaborador</span>
+                <img src="/Imagens/icons8-sair-24.png" alt="Sair">
+            </div>
+
+
+        </header>
+        <main>
+
+            <div class="barra">
+                <label class="pesquisa" for="Lupa">Pesquisar Fornecedor</label>
+                <input class="digitarLupa" type="text" name="pesquisar" id="pesquisar">
+                <button class="busca" type="submit">Buscar</button>
+
+            </div>
+
+            <section>
+                <form class="cadastroFornecedor">
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Razão Social</label>
+                        <input class="digitar" type="text" name="razaoSocial" id="razaoSocial">
+
+                    </div>
+
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Endereço</label>
+                        <input class="digitar" type="text" name="endereco" id="endereco">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Cidade</label>
+                        <input class="digitar" type="text" name="cidade" id="cidade">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">CEP</label>
+                        <input class="digitar" type="text" name="cep" id="cep">
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Telefone</label>
+                        <input class="digitar" type="tel" name="telefone" id="telefone">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Email</label>
+                        <input class="digitar" type="email" name="email" id="email">
+
+                    </div>
+
+
+
+                </form>
+
+                <div class="grupoBotao">
+                    <button class="botao apagar" type="submit">Apagar</button>
+                    <button class="botao editar" type="submit">Editar</button>
+                    <button class="botao salvar" type="submit">Salvar</button>
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Grupo16_ProjetoIntegrador</p>
+    </footer>
+
+</body>
+
+</html>
