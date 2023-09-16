@@ -42,12 +42,12 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 - [x] Aualização Cadastral Fornecedores
 
 ##Páginas Implemntadas
-![Tela Inicial]([URL_da_imagem](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)
+![Página Inicial][dash]([(https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)]
 
-![Pagina de Login]([URL_da_imagem](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)
+![Pagina de Login]([dash][(https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)]
 
-##Páginas implemntadas em HTML
-![Texto alternativo da imagem]([URL_da_imagem](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Atualiza%C3%A7%C3%A3oCadastralFornecedor.JPG)https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Atualiza%C3%A7%C3%A3oCadastralFornecedor.JPG)
+
+![Atualização Cadastral Fornecedor]![dash]([](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Atualiza%C3%A7%C3%A3oCadastralFornecedor.JPG))
 
 
 
