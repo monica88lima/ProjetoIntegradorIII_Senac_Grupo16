@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualização Cadastral</title>
     <link rel="icon" href="" />
-    <link rel="stylesheet" href="/css/cadFornecedores_style.css" />
+    <link rel="stylesheet" href="/css/cadAluno.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,7 +24,7 @@
             </div>
 
             <div class="titulo">
-                <h1>Atualização Cadastral</h1>
+                <h1>Cadastro Aluno</h1>
 
             </div>
             <div class="atalhoHome">
@@ -46,17 +46,31 @@
         <main>
 
             <div class="barra">
-                <label class="pesquisa" for="Lupa">Pesquisar Fornecedor</label>
-                <input class="digitarLupa" type="text" name="pesquisar" id="pesquisar">
-                <button class="busca" type="submit">Buscar</button>
+               
+               <label >Selecione o Curso</label>
+                <select class="custom-select" >
+                    <option value="opcao1">Matematica</option>
+                    <option value="opcao2">Cinema</option>
+                    <option value="opcao3">Medicina</option>
+                </select>
 
             </div>
 
             <section>
                 <form class="cadastroFornecedor">
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Razão Social</label>
-                        <input class="digitar" type="text" name="razaoSocial" id="razaoSocial">
+                        <label class="descricao" for="cadastro">Nome Completo</label>
+                        <input class="digitar" type="text" name="nomecompleto" id="nomecompleto">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">CPF</label>
+                        <input class="digitar" type="text" name="cpf" id="cpf">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Data de Nasc.</label>
+                        <input class="digitar" type="text" name="nasc" id="nasc">
 
                     </div>
 
@@ -73,6 +87,7 @@
                     <div class="form-control">
                         <label class="descricao" for="cadastro">CEP</label>
                         <input class="digitar" type="text" name="cep" id="cep">
+                        <button class= "button-consulta" onclick="ConsultaCep(event)">Consultar</button>
                     </div>
                     <div class="form-control">
                         <label class="descricao" for="cadastro">Telefone</label>
@@ -105,6 +120,44 @@
     <footer class="footer">
         <p>&copy; Grupo16_ProjetoIntegrador</p>
     </footer>
+    <script>
+        const cep = document.getElementById("cep");
+
+        async function ConsultaCep(event){
+            event.preventDefault();
+            console.log(event);
+            try {
+                if(cep.value){
+                    const resposta = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
+                    console.log(resposta)
+                    if(resposta.ok){
+                        const respJson = await resposta.json();
+                        console.log(respJson);
+                        preencheCampos(respJson);
+                    }
+                    
+
+                }
+
+                
+                
+            } catch (error) {
+                
+            }
+
+        }
+        function preencheCampos(respJson){
+            endereco.value = respJson.logradouro;
+            cidade.value = respJson.localidade;
+            estado.value = respJson.uf;
+            bairro.value = respJson.bairro;
+    
+
+        }
+
+
+    </script>
+ 
 
 </body>
 

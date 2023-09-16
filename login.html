@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Senac</title>
+    <title>Login</title>
     <link rel="icon" href="" />
-    <link rel="stylesheet" href="estilo_login.css" />
+    <link rel="stylesheet" href="/css/login_style.css" />
 </head>
 
 <body>
@@ -32,8 +32,8 @@
                 <input type="password" name="senha" id="senha" class="acesso" title="Senha" placeholder="Senha">
                 <a href="Esquecisenha" class="esqueci">Esqueci a senha</a>
 
-                <button type="submit" id="entrar">Entrar</button>
-                <a href="PaginaInicial" class="home">Voltar para Home</a>
+                <button id="entrar" onclick=login()>Entrar</button>
+                <a href="home.html" class="home">Voltar para Home</a>
 
             </form>
 
@@ -64,30 +64,33 @@
                 return;
 
             const data = {
-                'email': email.value,
-                'senha': senha.value
+                email: email.value,
+                senha: senha.value
             }
 
             try {
-                const resposta = await fetch("api/login", {
+                const resposta = await fetch(`http://localhost:8080/usuario/login`, {
                     method: "POST",
-                    body: data
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
                 });
 
-                const respJson = await resposta.json();
-
-                
+                if (resposta.ok) {
+                    const respJson = await resposta.json();
+                    alert("Acesso Liberado");
+                    window.location.href = 'home.html';
+                } else if (resposta.status === 404) {
+                    const respJson = await resposta.json();
+                    alert(respJson.mensagem);
+                } else {
+                    alert("Erro Inesperado!");
+                }
 
             } catch (error) {
-                if (resposta.status === 404) {
-                    alert(respJson.mensagem);
-                    return;
-                }
-                else{
-                    alert("Erro Inesperado!");
-                    return;
-
-                }
+                console.error(error);
+                alert("Erro Inesperado!");
             }
 
 
