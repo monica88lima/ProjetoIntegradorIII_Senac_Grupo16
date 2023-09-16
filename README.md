@@ -47,6 +47,9 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 
 ![Pagina de Login](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)
 
+![Cadastro Aluno](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroAluno.JPG)
+
+![Cadastro Professor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroProfessor.JPG)
 
 ![Atualização Cadastral Fornecedor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Atualiza%C3%A7%C3%A3oCadastralFornecedor.JPG)
 
