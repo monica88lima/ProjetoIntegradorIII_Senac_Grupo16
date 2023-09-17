@@ -20,7 +20,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 <p align="center">🚀 lib para construir interfaces do usuário </p>
 
 * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
+   
    * [Instalação](#instalacao)
    - Após instalar do gerenciador de banco de dados, execute o comando abaixo para criar o database;
    ```bash
@@ -33,8 +33,8 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
    ```
    
    - No Intellij acesse a pasta **resources**, abra o arquivo **application.properties** e valide as configurações de acesso ao banco de dados;
-   > [!NOTE]
-      ```bash
+   
+  ```bash
      spring.datasource.url=jdbc:postgresql://localhost:5432/gestaoacademica-api
      spring.datasource.username=postgres
      spring.datasource.password= ******
@@ -50,7 +50,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
      
    * [Como usar](#como-usar)
    * :triangular_flag_on_post:
-   ![Vídeo de demonstração]()
+   ![Vídeo de demonstração](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/testeFuncional.mp4)
 
      
    * [Pre Requisitos](#pre-requisitos)
@@ -61,7 +61,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
   * [Pacotes e Bibliotecas](#Pacotes-e-Bibliotecas)
       :bulb:* 
     - springframework
-    ![springframework]
+    ![springframework](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/springboot.png)
 
 ### Features
 
@@ -81,9 +81,9 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 
 ![Cadastro Aluno](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroAluno.JPG)
 
-![Menu]
+![Menu](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Menu.png)
 
-![Pesquisa]
+![Pesquisa](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Pesquisa.png)
 
 ![Cadastro Professor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroProfessor.JPG)
 
