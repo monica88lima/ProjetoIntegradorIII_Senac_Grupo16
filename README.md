@@ -22,7 +22,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 * [Sobre](#Sobre)
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Instalação](#instalacao)
-   - Após instalar do gerenciamento de banco de dados, execute o comando abaixo para criar o database;
+   - Após instalar do gerenciador de banco de dados, execute o comando abaixo para criar o database;
    ```bash
     CREATE DATABASE "gestaoacademica-api"
     WITH
@@ -31,8 +31,9 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
     CONNECTION LIMIT = -1
     IS_TEMPLATE = False;
    ```
-   > [!NOTE]
+   
    - No Intellij acesse a pasta **resources**, abra o arquivo **application.properties** e valide as configurações de acesso ao banco de dados;
+   > [!NOTE]
       ```bash
      spring.datasource.url=jdbc:postgresql://localhost:5432/gestaoacademica-api
      spring.datasource.username=postgres
@@ -41,16 +42,16 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 
      spring.jpa.properties.hibernate.jdbc.lob.non_context_create=true
    ```
+
   - Posteriormente ainda no Intellij acesse a pasta do **com.example.projetosenac** e selecione a opção **RUN**
+    Nesta etapa o Hibernate fará toda a criação das tabelas no banco de dados;
 
-  > [!NOTE]
-  > Nesta etapa o Hibernate fará toda a criação das tabelas no banco de dados;
-
-  > [!IMPORTANT]
-  > API subirá localmente.
+   > API subirá localmente.
      
    * [Como usar](#como-usar)
    * :triangular_flag_on_post:
+   ![Vídeo de demonstração]()
+
      
    * [Pre Requisitos](#pre-requisitos)
     - Banco de Dados Postgresql instalado - ![Link Download](https://www.postgresql.org/download/)
@@ -58,7 +59,9 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
     - IntelliJ IDEA Community Edition ![Link Download](https://www.jetbrains.com/edu-products/download/other-IIE.html)
      
   * [Pacotes e Bibliotecas](#Pacotes-e-Bibliotecas)
-      :bulb:* [Local files](#local-files)
+      :bulb:* 
+    - springframework
+    ![springframework]
 
 ### Features
 
@@ -73,9 +76,14 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 ##Páginas Implemntadas
 
 ![Página Inicial](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)
+
 ![Pagina de Login](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)
 
 ![Cadastro Aluno](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroAluno.JPG)
+
+![Menu]
+
+![Pesquisa]
 
 ![Cadastro Professor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroProfessor.JPG)
 
