@@ -50,7 +50,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
      
    * [Como usar](#como-usar)
    * :triangular_flag_on_post:
-   ![Vídeo de demonstração](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/testeFuncional.mp4)
+   ![Vídeo de demonstração](https://youtu.be/dh9WAxW_mC8)
 
      
    * [Pre Requisitos](#pre-requisitos)
@@ -72,6 +72,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 - [ ] Lançar Notas
 - [ ] Emitir Documentos
 - [ ] Aualização Cadastral Fornecedores
+
 
 ##Páginas Implemntadas
 
