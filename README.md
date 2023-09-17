@@ -13,6 +13,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
  - Html
  - Css
  - JavaScript
+ - Postgresql
  
 -[Recursos](#recursos)
 
