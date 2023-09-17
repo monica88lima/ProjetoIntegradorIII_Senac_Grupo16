@@ -21,7 +21,19 @@ public abstract class PessoaModel extends PadraoModel {
     private EnderecoModel endereco;
 
     // Construtor
-    public PessoaModel(UUID Id, boolean ativo, Date dataCriacao, Date dataAtualizacao, String NomeCompleto, String CPF, Date DataNascimento, String email, String senha, String numero) {
+    public PessoaModel(
+            UUID Id,
+            boolean ativo,
+            Date dataCriacao,
+            Date dataAtualizacao,
+            String NomeCompleto,
+            String CPF,
+            Date DataNascimento,
+            String email,
+            String senha,
+            String numero,
+            EnderecoModel endereco
+    ) {
         super(Id,ativo, dataCriacao, dataAtualizacao);
         this.NomeCompleto = NomeCompleto;
         this.CPF = CPF;
@@ -30,6 +42,7 @@ public abstract class PessoaModel extends PadraoModel {
         this.email = email;
         this.senha = senha;
         this.Numero = numero;
+        this.endereco = endereco;
     }
     public PessoaModel() {
 
@@ -89,4 +102,11 @@ public abstract class PessoaModel extends PadraoModel {
         this.Numero = numero;
     }
 
+    public EnderecoModel getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(EnderecoModel endereco) {
+        this.endereco = endereco;
+    }
 }

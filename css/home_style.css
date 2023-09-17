@@ -110,6 +110,9 @@ p{
   }
   .foto img {
     width: 760px;
+    position: fixed;
+    bottom: 90px;
+
   }
   .btn{
     padding-top: 40px;

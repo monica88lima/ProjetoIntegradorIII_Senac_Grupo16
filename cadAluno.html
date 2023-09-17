@@ -46,68 +46,91 @@
         <main>
 
             <div class="barra">
-               
-               <label >Selecione o Curso</label>
-                <select class="custom-select" >
-                    <option value="opcao1">Matematica</option>
-                    <option value="opcao2">Cinema</option>
-                    <option value="opcao3">Medicina</option>
+
+                <label>Selecione o Curso</label>
+                <select class="custom-select" id="cursoId">
+                    <option value="3e4537de-e996-4b2b-ac88-fc17b3dc4202">Matematica</option>
+                    <option value="2">Cinema</option>
+                    <option value="3">Medicina</option>
                 </select>
 
             </div>
 
             <section>
-                <form class="cadastroFornecedor">
+                <form class="cadastroFornecedor" id="cadastroFornecedor">
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Nome Completo</label>
+                        <label class="descricao" for="nomecompleto">Nome Completo</label>
                         <input class="digitar" type="text" name="nomecompleto" id="nomecompleto">
 
                     </div>
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">CPF</label>
+                        <label class="descricao" for="cpf">CPF</label>
                         <input class="digitar" type="text" name="cpf" id="cpf">
 
                     </div>
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Data de Nasc.</label>
-                        <input class="digitar" type="text" name="nasc" id="nasc">
+                        <label class="descricao" for="nasc">Data de Nasc.</label>
+                        <input class="digitar" type="date" name="nasc" id="nasc">
 
                     </div>
 
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Endereço</label>
+                        <label class="descricao" for="endereco">Endereço</label>
                         <input class="digitar" type="text" name="endereco" id="endereco">
 
                     </div>
+
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Cidade</label>
+                        <label class="descricao" for="bairro">Bairro</label>
+                        <input class="digitar" type="text" name="bairro" id="bairro">
+
+                    </div>
+
+                    <div class="form-control">
+                        <label class="descricao" for="numero">Número</label>
+                        <input class="digitar" type="text" name="numero" id="numero">
+
+                    </div>
+
+                    <div class="form-control">
+                        <label class="descricao" for="complemento">Complemento</label>
+                        <input class="digitar" type="text" name="complemento" id="complemento">
+
+                    </div>
+
+                    <div class="form-control">
+                        <label class="descricao" for="cidade">Cidade</label>
                         <input class="digitar" type="text" name="cidade" id="cidade">
 
                     </div>
+
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">CEP</label>
+                        <label class="descricao" for="estado">Estado</label>
+                        <input class="digitar" type="text" name="estado" id="estado">
+
+                    </div>
+
+                    <div class="form-control">
+                        <label class="descricao" for="cep">CEP</label>
                         <input class="digitar" type="text" name="cep" id="cep">
-                        <button class= "button-consulta" onclick="ConsultaCep(event)">Consultar</button>
+                        <button class="button-consulta" onclick="ConsultaCep(event)">Consultar</button>
                     </div>
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Telefone</label>
+                        <label class="descricao" for="telefone">Telefone</label>
                         <input class="digitar" type="tel" name="telefone" id="telefone">
 
                     </div>
                     <div class="form-control">
-                        <label class="descricao" for="cadastro">Email</label>
+                        <label class="descricao" for="email">Email</label>
                         <input class="digitar" type="email" name="email" id="email">
 
                     </div>
-
-
-
                 </form>
 
                 <div class="grupoBotao">
-                    <button class="botao apagar" type="submit">Apagar</button>
-                    <button class="botao editar" type="submit">Editar</button>
-                    <button class="botao salvar" type="submit">Salvar</button>
+                    <button class="botao apagar" onclick="deletar()">Apagar</button>
+                    <button class="botao editar" onclick="enableform('cadastroFornecedor')">Editar</button>
+                    <button class="botao salvar" onclick="salvar()">Salvar</button>
                 </div>
 
 
@@ -121,43 +144,189 @@
         <p>&copy; Grupo16_ProjetoIntegrador</p>
     </footer>
     <script>
+
         const cep = document.getElementById("cep");
 
-        async function ConsultaCep(event){
+        function disableform(formId) {
+            var f = document.forms[formId].getElementsByTagName('input');
+            for (var i = 0; i < f.length; i++)
+                f[i].disabled = true
+            var f = document.forms[0].getElementsByTagName('textarea');
+            for (var i = 0; i < f.length; i++)
+                f[i].disabled = true
+
+            var f = document.forms[0].getElementsByTagName('button');
+            for (var i = 0; i < f.length; i++)
+                f[i].disabled = true
+
+
+            document.querySelector(".salvar").setAttribute("disabled", true);
+            document.querySelector(".apagar").setAttribute("disabled", true);
+        }
+
+        function enableform(formId) {
+            var f = document.forms[formId].getElementsByTagName('input');
+            for (var i = 0; i < f.length; i++)
+                f[i].disabled = false
+            var f = document.forms[0].getElementsByTagName('textarea');
+            for (var i = 0; i < f.length; i++)
+                f[i].disabled = false
+            var f = document.forms[0].getElementsByTagName('button');
+            for (var i = 0; i < f.length; i++)
+                f[i].disabled = false
+
+            document.querySelector(".salvar").removeAttribute("disabled");
+            document.querySelector(".apagar").removeAttribute("disabled");
+        }
+
+        const url = new URL(location.href);
+        const searchParams = url.searchParams;
+        const alunoId = searchParams.get('alunoId');
+
+        if (alunoId === null) {
+            document.querySelector(".apagar").style.display = "none";
+            document.querySelector(".editar").style.display = "none";
+        }
+        else {
+
+            disableform("cadastroFornecedor");
+            carregaAluno();
+        }
+
+        function carregaAluno() {
+            const aluno = localStorage.getItem("aluno");
+            const alunoJson = JSON.parse(aluno);
+            const dataFormatada = alunoJson.dataNascimento.substring(0, 10);
+
+            nomecompleto.value = alunoJson.nomeCompleto;
+            cpf.value = alunoJson.cpf;
+            nasc.value = dataFormatada;
+            endereco.value = alunoJson.endereco.logradouro;
+            numero.value = alunoJson.endereco.numero;
+            complemento.value = alunoJson.endereco.complemento;
+            cep.value = alunoJson.endereco.cep;
+            bairro.value = alunoJson.endereco.bairro;
+            cidade.value = alunoJson.endereco.cidade;
+            estado.value = alunoJson.endereco.estado;
+            email.value = alunoJson.email;
+            telefone.value = alunoJson.numero;
+
+
+        }
+
+
+
+        async function ConsultaCep(event) {
             event.preventDefault();
-            console.log(event);
             try {
-                if(cep.value){
+                if (cep.value) {
                     const resposta = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
                     console.log(resposta)
-                    if(resposta.ok){
+                    if (resposta.ok) {
                         const respJson = await resposta.json();
                         console.log(respJson);
                         preencheCampos(respJson);
                     }
-                    
-
                 }
-
-                
-                
             } catch (error) {
-                
+
             }
 
         }
-        function preencheCampos(respJson){
+        function preencheCampos(respJson) {
             endereco.value = respJson.logradouro;
             cidade.value = respJson.localidade;
             estado.value = respJson.uf;
             bairro.value = respJson.bairro;
-    
+        }
+
+        async function salvar() {
+
+            const data = {
+                "NomeCompleto": nomecompleto.value,
+                "CPF": cpf.value,
+                "DataNascimento": nasc.value,
+                "endereco": {
+                    "logradouro": endereco.value,
+                    "numero": numero.value,
+                    "complemento": complemento.value,
+                    "cep": cep.value,
+                    "bairro": bairro.value,
+                    "cidade": cidade.value,
+                    "estado": estado.value
+                },
+                "curso_id": cursoId.value,
+                "email": email.value,
+                "Numero": telefone.value
+            }
+
+            if (alunoId) data.id = alunoId;
+
+            let formDataJsonString = JSON.stringify(data);
+
+            let fetchOptions = {
+                method: alunoId !== null ? "PUT" : "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: formDataJsonString,
+            };
+
+            try {
+                const response = await fetch(`http://localhost:8080/aluno${alunoId !== null ? '/' + alunoId : ''}`, fetchOptions);
+
+                if (!response.ok) {
+                    let error = await response.text();
+                    throw new Error(response.status);
+                }
+
+                const resp = await response.json();
+                alert(statusCodeMessage(response.status));
+                window.location.href = 'menu.html';
+
+            } catch (error) {
+                alert(statusCodeMessage(error));
+            }
+
 
         }
 
+        async function deletar() {
+
+            try {
+
+                const response = await fetch(`http://localhost:8080/aluno/${alunoId}`, {
+                    method: "DELETE"
+                });
+
+                if (!response.ok) {
+                    let error = await response.text();
+                    throw new Error(response.status);
+                }
+
+                alert(statusCodeMessage(response.status));
+                localStorage.clear();
+                window.location.href = 'menu.html';
+
+            } catch (error) {
+                alert(statusCodeMessage(error));
+            }
+
+
+        }
+
+        const statusCodeMessage = (statusCode) => ({
+            200: "Registro processado com sucesso",
+            201: "Usuário criado",
+            400: "Requisição inválida",
+            401: "Não autenticado",
+            403: "Não autorizado",
+            404: "Email ou senha inválidos"
+        })[statusCode]
+
 
     </script>
- 
+
 
 </body>
 

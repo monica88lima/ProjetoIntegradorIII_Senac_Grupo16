@@ -13,20 +13,36 @@ public class AlunoModel extends PessoaModel{
     @SequenceGenerator(name = "matricula_seq", sequenceName = "matricula_sequence", allocationSize = 1)
     @Column(name = "matricula", updatable = false, nullable = false)
     private int matricula;
-    @ManyToOne
-    @JoinColumn(name = "curso_id")
-    private CursoModel curso;
+//    @ManyToOne
+//    private CursoModel curso;
+
+    public UUID curso_id;
 
 
-    public AlunoModel(UUID Id, boolean ativo, Date dataCriacao, Date dataAtualizacao, String NomeCompleto, String CPF, Date DataNascimento, String email, String senha, String numero, CursoModel curso, int matricula) {
-        super(Id, ativo, dataCriacao, dataAtualizacao, NomeCompleto, CPF, DataNascimento, email, senha, numero);
-        this.curso = curso;
-        this.matricula = matricula;
-    }
+
 
     public AlunoModel() {
 
 
+    }
+
+    public AlunoModel(
+            UUID Id,
+            boolean ativo,
+            Date dataCriacao,
+            Date dataAtualizacao,
+            String NomeCompleto,
+            String CPF,
+            Date DataNascimento,
+            String email,
+            String senha,
+            String numero,
+            EnderecoModel endereco,
+            int matricula,
+            UUID curso_id) {
+        super(Id, ativo, dataCriacao, dataAtualizacao, NomeCompleto, CPF, DataNascimento, email, senha, numero, endereco);
+        this.matricula = matricula;
+        this.curso_id = curso_id;
     }
 
     public int getMatricula() {
@@ -37,15 +53,22 @@ public class AlunoModel extends PessoaModel{
         this.matricula = matricula;
     }
 
-
-
-    public CursoModel getCurso() {
-        return curso;
+    public UUID getCurso_id() {
+        return curso_id;
     }
 
-    public void setCurso(CursoModel curso) {
-        this.curso = curso;
+    public void setCurso_id(UUID curso_id) {
+        this.curso_id = curso_id;
     }
+
+
+//    public CursoModel getCurso() {
+//        return curso;
+//    }
+//
+//    public void setCurso(CursoModel curso) {
+//        this.curso = curso;
+//    }
 
 
 

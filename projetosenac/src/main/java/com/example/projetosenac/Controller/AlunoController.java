@@ -1,8 +1,10 @@
 package com.example.projetosenac.Controller;
 
 import com.example.projetosenac.Repository.AlunoRepository;
+import com.example.projetosenac.Repository.EnderecoRepository;
 import com.example.projetosenac.dto.AlunoRecordDto;
 import com.example.projetosenac.models.AlunoModel;
+import com.example.projetosenac.models.EnderecoModel;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +16,26 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-
+@CrossOrigin(origins = "*")
 @RestController
 public class AlunoController {
     @Autowired
     AlunoRepository alunoRepository;
+    @Autowired
+    EnderecoRepository enderecoRepository;
 
     @PostMapping("/aluno")
     public ResponseEntity<AlunoModel> saveAluno(@RequestBody @Valid AlunoRecordDto alunoRecordDto) {
         var alunoModel = new AlunoModel();
         BeanUtils.copyProperties(alunoRecordDto, alunoModel);
+
+        var enderecoModel = new EnderecoModel();
+        BeanUtils.copyProperties(alunoRecordDto.endereco(), enderecoModel);
+
+        alunoModel.setEndereco(enderecoModel);
+
+        enderecoRepository.save(enderecoModel);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(alunoRepository.save(alunoModel));
 
     }
@@ -46,6 +58,15 @@ public class AlunoController {
         }
         var alunoModel = aluno0.get();
         BeanUtils.copyProperties(alunoRecordDto, alunoModel);
+
+        var enderecoModel = new EnderecoModel();
+        BeanUtils.copyProperties(alunoRecordDto.endereco(), enderecoModel);
+
+        alunoModel.setEndereco(enderecoModel);
+
+        enderecoRepository.save(enderecoModel);
+
+
         return ResponseEntity.status(HttpStatus.OK).body(alunoRepository.save(alunoModel));
     }
 
@@ -57,6 +78,11 @@ public class AlunoController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aluno não localizado");
         }
         alunoRepository.delete(aluno0.get());
+        var endereco = enderecoRepository.findById(aluno0.get().getEndereco().Id);
+
+        endereco.ifPresent(enderecoModel -> enderecoRepository.delete(enderecoModel));
+
+
         return ResponseEntity.status(HttpStatus.OK).body("Aluno excluido da base de dados com sucesso");}
 
 

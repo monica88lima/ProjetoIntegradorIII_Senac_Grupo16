@@ -26,13 +26,13 @@
 
             </div>
 
-            <form action="">
+            <form onsubmit="login(event)">
                 <input type="email" name="email" id="email" class="acesso" title="Digite seu Email"
                     placeholder="Digite seu Email">
                 <input type="password" name="senha" id="senha" class="acesso" title="Senha" placeholder="Senha">
                 <a href="Esquecisenha" class="esqueci">Esqueci a senha</a>
 
-                <button id="entrar" onclick=login()>Entrar</button>
+                <button id="entrar" type="submit">Entrar</button>
                 <a href="home.html" class="home">Voltar para Home</a>
 
             </form>
@@ -59,7 +59,8 @@
             return true;
         }
 
-        async function login() {
+        async function login(event) {
+            event.preventDefault();
             if (!validaCampos())
                 return;
 
@@ -69,7 +70,7 @@
             }
 
             try {
-                const resposta = await fetch(`http://localhost:8080/usuario/login`, {
+                const resposta = await fetch(`http://localhost:8080/usuario`, {
                     method: "POST",
                     headers: {
                         'Content-Type': 'application/json'
@@ -77,16 +78,12 @@
                     body: JSON.stringify(data)
                 });
 
+                alert(statusCodeMessage(resposta.status));
+
                 if (resposta.ok) {
-                    const respJson = await resposta.json();
-                    alert("Acesso Liberado");
-                    window.location.href = 'home.html';
-                } else if (resposta.status === 404) {
-                    const respJson = await resposta.json();
-                    alert(respJson.mensagem);
-                } else {
-                    alert("Erro Inesperado!");
-                }
+                    const respJson = await resposta.json();                    
+                    window.location.href = 'menu.html';
+                } 
 
             } catch (error) {
                 console.error(error);
@@ -95,6 +92,14 @@
 
 
         }
+
+
+        const statusCodeMessage = (statusCode) => ({
+            200: "Usuário autenticado",            
+            401: "Não autenticado",
+            403: "Não autorizado",
+            404: "Email ou senha inválidos"
+        })[statusCode]
 
 
     </script>

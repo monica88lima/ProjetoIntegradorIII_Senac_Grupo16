@@ -1,12 +1,9 @@
 package com.example.projetosenac.models;
+
 import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
-
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 @Entity
 @Table(name = "Endereco")
@@ -18,11 +15,6 @@ public class EnderecoModel extends PadraoModel{
     private String bairro;
     private String cidade;
     private String estado;
-
-
-
-
-
 
     public EnderecoModel(UUID Id, boolean ativo, Date dataCriacao, Date dataAtualizacao, String logradouro, String numero, String complemento, String cep, String bairro, String cidade, String estado) {
         super(Id,ativo,dataCriacao,dataAtualizacao);

@@ -8,11 +8,9 @@ import jakarta.validation.constraints.NotNull;
 import java.util.Date;
 
 public record EnderecoRecordDto(@NotBlank String logradouro,
-                                @NotBlank String numero ,
-                                @NotBlank  String DataNascimento,
-                                @NotBlank  String endereco,
-                                @NotBlank  String bairro,
-                                @NotBlank  String estado,
+                                @NotBlank String numero,
+                                @NotBlank String bairro,
+                                @NotBlank String estado,
                                 @NotBlank String cidade,
                                 @NotBlank String cep) {
- }
+}

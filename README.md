@@ -22,11 +22,40 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 * [Sobre](#Sobre)
    * [Tabela de Conteudo](#tabela-de-conteudo)
    * [Instalação](#instalacao)
+   - Após instalar do gerenciamento de banco de dados, execute o comando abaixo para criar o database;
+   ```bash
+    CREATE DATABASE "gestaoacademica-api"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+   ```
+   > [!NOTE]
+   - No Intellij acesse a pasta **resources**, abra o arquivo **application.properties** e valide as configurações de acesso ao banco de dados;
+      ```bash
+     spring.datasource.url=jdbc:postgresql://localhost:5432/gestaoacademica-api
+     spring.datasource.username=postgres
+     spring.datasource.password= ******
+     spring.jpa.hibernate.ddl-auto=update
+
+     spring.jpa.properties.hibernate.jdbc.lob.non_context_create=true
+   ```
+  - Posteriormente ainda no Intellij acesse a pasta do **com.example.projetosenac** e selecione a opção **RUN**
+
+  > [!NOTE]
+  > Nesta etapa o Hibernate fará toda a criação das tabelas no banco de dados;
+
+  > [!IMPORTANT]
+  > API subirá localmente.
      
    * [Como usar](#como-usar)
    * :triangular_flag_on_post:
      
    * [Pre Requisitos](#pre-requisitos)
+    - Banco de Dados Postgresql instalado - ![Link Download](https://www.postgresql.org/download/)
+    - Visual Studio Code - ![Link Download](https://code.visualstudio.com/download)
+    - IntelliJ IDEA Community Edition ![Link Download](https://www.jetbrains.com/edu-products/download/other-IIE.html)
      
   * [Pacotes e Bibliotecas](#Pacotes-e-Bibliotecas)
       :bulb:* [Local files](#local-files)
@@ -35,16 +64,15 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 
 - [ ] Cadastro de Colaborador
 - [x] Cadastro de Aluno
-- [x] Cadastro de Professor
+- [ ] Cadastro de Professor
 - [ ] Cadastro de Filial
 - [ ] Lançar Notas
 - [ ] Emitir Documentos
-- [x] Aualização Cadastral Fornecedores
+- [ ] Aualização Cadastral Fornecedores
 
 ##Páginas Implemntadas
 
-![Página Inicial](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)
-
+![Página Inicial](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)
 ![Pagina de Login](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)
 
 

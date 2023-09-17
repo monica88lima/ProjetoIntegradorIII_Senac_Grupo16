@@ -6,13 +6,15 @@
 }
 
 .conteinerA {
-   
-   height: 100%;
+
+    height: 100%;
 
 }
-body{
+
+body {
     background-color: rgba(217, 217, 217, 1);
 }
+
 header {
     display: flex;
     height: 150px;
@@ -25,7 +27,6 @@ header {
 .logo,
 .atalhoHome,
 .titulo,
-.form-control,
 .nome_tpPerfil {
     display: flex;
     align-items: center;
@@ -35,8 +36,9 @@ header {
 
 
 }
-.form-control label{
-width: 8rem;
+
+.form-control label {
+    width: 8rem;
 }
 
 .nome_tpPerfil {
@@ -50,7 +52,7 @@ width: 8rem;
 }
 
 
-.circulo  {
+.circulo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +166,7 @@ section {
     font-family: 'Cabin Condensed', sans-serif;
     font-size: 14px;
     font-style: oblique;
-    padding: 0 45px ;
+    padding: 0 45px;
 
 
 
@@ -181,7 +183,7 @@ section {
     border-radius: 4px;
     box-sizing: border-box;
     margin-left: 10px;
-    background-color: rgb(245, 238, 238);
+    background-color: rgb(75, 63, 63);
     border-radius: 8px;
     text-transform: uppercase
 }
@@ -191,20 +193,27 @@ section {
     justify-content: center;
     align-items: center;
     gap: 70px;
+    height: 50vh;
 }
 
 .botao {
 
+    height: 128px;
     border: none;
-    color: white;
+    color: rgb(95, 87, 87);
     padding: 8px 45px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 16px;
     border-radius: 20px;
     margin-bottom: 35px;
     margin-top: 25px;
+    background-color: #fff;
 
 }
 
@@ -212,17 +221,7 @@ section {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-.apagar {
-    background-color: #EB443A;
-}
 
-.editar {
-    background-color: #D9B864;
-}
-
-.salvar {
-    background-color: #23AD41;
-}
 
 
 .footer {
@@ -236,57 +235,66 @@ section {
     position: fixed;
 
 }
+
 .custom-select {
     position: relative;
-    width: 500px; 
+    width: 500px;
     overflow: hidden;
-    background-color: rgb(218, 213, 213); 
-    border: 1px solid #929090; 
-    border-radius: 5px; 
-    
-  }
-  
-  .custom-select select {
+    background-color: rgb(218, 213, 213);
+    border: 1px solid #929090;
+    border-radius: 5px;
+
+}
+
+.custom-select select {
     width: 100%;
-    padding: 10px; 
+    padding: 10px;
     border: none;
     outline: none;
-    background-color: transparent; 
-  }
-  
-  .custom-select::after {
-    content: '\f107'; 
-    font-family:'Cabin Condensed', sans-serif;
+    background-color: transparent;
+}
+
+.custom-select::after {
+    content: '\f107';
+    font-family: 'Cabin Condensed', sans-serif;
     position: absolute;
     top: 0;
     right: 0;
     padding: 10px;
-    background-color: #f0f0f0; /* Cor de fundo do ícone */
+    background-color: #f0f0f0;
+    /* Cor de fundo do ícone */
     cursor: pointer;
-    color:#fcf7f7;
+    color: #fcf7f7;
     font-size: 14px
-  }
-  .button-consulta {
-    background-color: #007bff; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Cursor ao passar por cima */
-    font-size: 16px; /* Tamanho da fonte */
+}
+
+.button-consulta {
+    background-color: #007bff;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor ao passar por cima */
+    font-size: 16px;
+    /* Tamanho da fonte */
 }
 
 /* Efeito de hover (quando o mouse passa por cima) */
 .button-consulta:hover {
-    background-color: #0056b3; /* Cor de fundo alterada */
+    background-color: #0056b3;
+    /* Cor de fundo alterada */
 }
 
 /* Efeito de foco (quando o botão está selecionado) */
 .button-consulta:focus {
-    outline: none; /* Remove a borda de foco padrão do navegador */
-    box-shadow: 0 0 5px #007bff; /* Sombra ao redor do botão */
-}
-
-input:disabled {
-    opacity: .5;
+    outline: none;
+    /* Remove a borda de foco padrão do navegador */
+    box-shadow: 0 0 5px #007bff;
+    /* Sombra ao redor do botão */
 }
