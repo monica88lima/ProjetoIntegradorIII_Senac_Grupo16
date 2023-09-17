@@ -49,7 +49,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
    > API subirá localmente.
      
    * [Como usar](#como-usar)
-   * :triangular_flag_on_post: Link do vídeo
+   * :triangular_flag_on_post: Clique na imagem
   
    * [![Alt text](https://img.youtube.com/vi/dh9WAxW_mC8/0.jpg)](https://www.youtube.com/watch?v=dh9WAxW_mC8)
  
