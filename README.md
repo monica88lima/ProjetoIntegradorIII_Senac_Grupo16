@@ -50,13 +50,17 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
      
    * [Como usar](#como-usar)
    * :triangular_flag_on_post:
+   * [![Watch the video](https://www.youtube.com/watch?v=dh9WAxW_mC8)
  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dh9WAxW_mC8?si=H-D8TU7VzOJkhChh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
      
    * [Pre Requisitos](#pre-requisitos)
+   * 
     - Banco de Dados Postgresql instalado - ![Link Download](https://www.postgresql.org/download/)
+      
     - Visual Studio Code - ![Link Download](https://code.visualstudio.com/download)
+      
     - IntelliJ IDEA Community Edition ![Link Download](https://www.jetbrains.com/edu-products/download/other-IIE.html)
      
   * [Pacotes e Bibliotecas](#Pacotes-e-Bibliotecas)
