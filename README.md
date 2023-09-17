@@ -49,15 +49,13 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
    > API subirá localmente.
      
    * [Como usar](#como-usar)
-   * :triangular_flag_on_post:
+   * :triangular_flag_on_post: Link do vídeo
   
    * [![Alt text](https://img.youtube.com/vi/dh9WAxW_mC8/0.jpg)](https://www.youtube.com/watch?v=dh9WAxW_mC8)
  
-
-
      
    * [Pre Requisitos](#pre-requisitos)
-   * 
+     
     - Banco de Dados Postgresql instalado - (https://www.postgresql.org/download/)
       
     - Visual Studio Code - (https://code.visualstudio.com/download)
