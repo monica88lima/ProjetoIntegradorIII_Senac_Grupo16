@@ -21,11 +21,12 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 <p align="center">🚀 lib para construir interfaces do usuário </p>
 
 * [Sobre](#Sobre)
-     * [Diagrama de Classes](#diagrama de classes)
+   
   - Lucidchart : <a href ="https://lucid.app/documents/view/ec3bd863-a271-4fab-ba86-9bf903b07565"> Diagrama de Classes</a>
    
    * [Instalação](#instalacao)
    - Após instalar do gerenciador de banco de dados, execute o comando abaixo para criar o database;
+     
    ```bash
     CREATE DATABASE "gestaoacademica-api"
     WITH
