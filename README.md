@@ -21,6 +21,8 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 <p align="center">🚀 lib para construir interfaces do usuário </p>
 
 * [Sobre](#Sobre)
+    * * [Diagrama de Classes](#diagrama de classes)
+* <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/ec3bd863-a271-4fab-ba86-9bf903b07565" id="TH_vmZP~emkM"></iframe></div>
    
    * [Instalação](#instalacao)
    - Após instalar do gerenciador de banco de dados, execute o comando abaixo para criar o database;
