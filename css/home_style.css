@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgba(217, 217, 217, 1);
+}
+
+header {
+    display: flex;
+    height: 150px;
+
+    padding: 16px;
+    margin-bottom: 16px;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.pgnInicio {
+    justify-content: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+    font-family: 'Cabin Condensed', sans-serif;
+    padding: 45px;
+
+
+}
+
+.pgnInicio a {
+    margin-right: 32px;
+    text-decoration: none;
+    color: rgb(22, 16, 16);
+}
+main{
+    font-family: 'Cabin Condensed', sans-serif;
+    
+    
+}
+.texto {
+    padding: 75px;
+    line-height:28px;
+}
+h1{
+    font-size: 45px;
+}
+h5{
+    font-size: 20px; 
+    line-height:30px;
+    padding: 10px;
+}
+p{
+    font-size: 18px; 
+    line-height:20px;
+    padding: 10px;
+    
+}
+.containerB{
+    display: flex;
+
+}
+
+.button {
+    display: inline-block;
+    border-radius: 8px;
+    background-color: rgba(217, 184, 100, 1);
+    border: none;
+    color: #201414;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Cabin Condensed', sans-serif;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .foto img {
+    width: 760px;
+    position: fixed;
+    bottom: 90px;
+
+  }
+  .btn{
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+ 
+
+
+
+.footer {
+    padding: 25px;
+    background: rgba(54, 51, 51, 1);
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: inherit;
+    position:fixed;
+    bottom: 0;
+
+}

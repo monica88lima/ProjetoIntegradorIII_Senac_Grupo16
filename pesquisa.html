@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" href="/Imagens/favicon.ico" />
+    <link rel="stylesheet" href="/css/pesquisa.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;700&family=Montserrat:wght@300;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="conteinerA">
+        <header>
+            <div class="logo">
+                <img class="ImgLg" src="/Imagens/logo.png" alt="Logo">
+                <nav><img src="/Imagens/icons8-cardápio-50.png" alt="Menu"></nav>
+
+            </div>
+
+            <div class="titulo">
+                <h1>Pesquisar</h1>
+
+            </div>
+            <div class="atalhoHome">
+                <span><a href="home.html">Página Inicial</a></span>
+                <span><a href="#Perfil">Perfil</a></span>
+
+            </div>
+
+
+            <div class="nome_tpPerfil">
+                <span class="circulo"><span>EL</span></span>
+                <span id="nomePerfil">Nome</span>
+                <span id="nomePerfil">Colaborador</span>
+                <img src="/Imagens/icons8-sair-24.png" alt="Sair">
+            </div>
+
+
+        </header>
+        <main>
+
+            <div class="barra">
+
+                <label>Tipo de Usuário</label>
+                <select class="custom-select" id="tipo_usuario">
+                    <option value="cadAluno">Aluno</option>
+                    <option value="cadProfessor">Professor</option>
+                    <option value="cadColaborador">Colaborador</option>
+                    <option value="cadFornecedor">Fornecedor</option>
+                </select>
+
+            </div>
+            <div class="barra">
+                <label class="pesquisa" for="Lupa">Pesquisar </label>
+                <input class="digitarLupa" type="text" name="pesquisar" id="pesquisar">
+                <button class="busca" onclick="buscar()">Buscar</button>
+
+            </div>
+
+            <div class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome Completo</th>
+                            <th>CPF</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Grupo16_ProjetoIntegrador</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+
+    <script>
+        function navegar() {
+            const tipo_usuario = document.getElementById("tipo_usuario");
+
+            location.href = `${tipo_usuario.value}.html`
+        }
+
+        function inserirTabela(aluno) {
+            const table = document.querySelector('#tbody');
+            table.innerHTML = "";
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                    <td><a href="cadAluno.html?alunoId=${aluno.id}"> ${aluno.nomeCompleto} </a></td>
+                    <td>${aluno.cpf}</td>        
+                `;
+            table.appendChild(row);
+
+
+        }
+
+        async function buscar() {
+
+            try {
+
+                if (!pesquisar.value)
+                    return;
+
+
+                const response = await fetch(`http://localhost:8080/alunos/${pesquisar.value}`);
+
+                const alunosResp = await response.json();
+
+                inserirTabela(alunosResp);
+                localStorage.clear();
+                localStorage.setItem("aluno", JSON.stringify(alunosResp));
+
+            } catch (error) {
+
+            }
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

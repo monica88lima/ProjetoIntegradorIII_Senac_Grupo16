@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="/Imagens/favicon.ico" />
+    <link rel="stylesheet" href="/css/login_style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="esquerda">
+            <div class="logo">
+                <img id="logo" src="/imagens/logo.png" alt="logo">
+            </div>
+            <div class="img">
+                <img id="img" src="/Imagens/casual-life-3d-graduates-hat-and-books.png" alt="">
+            </div>
+        </div>
+        <div class="direita">
+            <div class="login-header">
+                <img src="/Imagens/icons8-login-arredondado-à-direita-64.png" alt="seta">
+                <h1>Login</h1>
+
+            </div>
+
+            <form onsubmit="login(event)">
+                <input type="email" name="email" id="email" class="acesso" title="Digite seu Email"
+                    placeholder="Digite seu Email">
+                <input type="password" name="senha" id="senha" class="acesso" title="Senha" placeholder="Senha">
+                <a href="Esquecisenha" class="esqueci">Esqueci a senha</a>
+
+                <button id="entrar" type="submit">Entrar</button>
+                <a href="home.html" class="home">Voltar para Home</a>
+
+            </form>
+
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>&copy; Grupo16_ProjetoIntegrador</p>
+    </footer>
+
+
+    <script>
+
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+
+        function validaCampos() {
+            if (email.value === "" || senha.value === "") {
+                alert('Email/Senha deve ser preenchido');
+                return false;
+            }
+
+            return true;
+        }
+
+        async function login(event) {
+            event.preventDefault();
+            if (!validaCampos())
+                return;
+
+            const data = {
+                email: email.value,
+                senha: senha.value
+            }
+
+            try {
+                const resposta = await fetch(`http://localhost:8080/usuario`, {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                alert(statusCodeMessage(resposta.status));
+
+                if (resposta.ok) {
+                    const respJson = await resposta.json();                    
+                    window.location.href = 'menu.html';
+                } 
+
+            } catch (error) {
+                console.error(error);
+                alert("Erro Inesperado!");
+            }
+
+
+        }
+
+
+        const statusCodeMessage = (statusCode) => ({
+            200: "Usuário autenticado",            
+            401: "Não autenticado",
+            403: "Não autorizado",
+            404: "Email ou senha inválidos"
+        })[statusCode]
+
+
+    </script>
+
+
+</body>
+
+</html>

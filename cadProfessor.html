@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Professor</title>
+    <link rel="icon" href="/Imagens/favicon.ico" />
+    <link rel="stylesheet" href="/css/cadAluno.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;700&family=Montserrat:wght@300;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="conteinerA">
+        <header>
+            <div class="logo">
+                <img class="ImgLg" src="/Imagens/logo.png" alt="Logo">
+                <nav><img src="/Imagens/icons8-cardápio-50.png" alt="Menu"></nav>
+
+            </div>
+
+            <div class="titulo">
+                <h1>Cadastro Professor</h1>
+
+            </div>
+            <div class="atalhoHome">
+                <span><a href="home.html">Página Inicial</a></span>
+                <span><a href="#Perfil">Perfil</a></span>
+
+            </div>
+
+
+            <div class="nome_tpPerfil">
+                <span class="circulo"><span>EL</span></span>
+                <span id="nomePerfil">Nome</span>
+                <span id="nomePerfil">Colaborador</span>
+                <img src="/Imagens/icons8-sair-24.png" alt="Sair">
+            </div>
+
+
+        </header>
+        <main>
+
+            <div class="barra">
+               
+               <label >Titulação</label>
+                <select class="custom-select" >
+                    <option value="opcao1">Graduação</option>
+                    <option value="opcao2">Especialização</option>
+                    <option value="opcao3">Mestrado</option>
+                    <option value="opcao3">Doutorado</option>
+                </select>
+
+            </div>
+
+            <section>
+                <form class="cadastroFornecedor">
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Nome Completo</label>
+                        <input class="digitar" type="text" name="nomecompleto" id="nomecompleto">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">CPF</label>
+                        <input class="digitar" type="text" name="cpf" id="cpf">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Data de Nasc.</label>
+                        <input class="digitar" type="text" name="nasc" id="nasc">
+
+                    </div>
+
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Endereço</label>
+                        <input class="digitar" type="text" name="endereco" id="endereco">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Cidade</label>
+                        <input class="digitar" type="text" name="cidade" id="cidade">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">CEP</label>
+                        <input class="digitar" type="text" name="cep" id="cep">
+                        <button class= "button-consulta" onclick="ConsultaCep(event)">Consultar</button>
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Telefone</label>
+                        <input class="digitar" type="tel" name="telefone" id="telefone">
+
+                    </div>
+                    <div class="form-control">
+                        <label class="descricao" for="cadastro">Email</label>
+                        <input class="digitar" type="email" name="email" id="email">
+
+                    </div>
+
+
+
+                </form>
+
+                <div class="grupoBotao">
+                    <button class="botao apagar" type="submit">Apagar</button>
+                    <button class="botao editar" type="submit">Editar</button>
+                    <button class="botao salvar" type="submit">Salvar</button>
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Grupo16_ProjetoIntegrador</p>
+    </footer>
+    <script>
+        const cep = document.getElementById("cep");
+
+        async function ConsultaCep(event){
+            event.preventDefault();
+            console.log(event);
+            try {
+                if(cep.value){
+                    const resposta = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
+                    console.log(resposta)
+                    if(resposta.ok){
+                        const respJson = await resposta.json();
+                        console.log(respJson);
+                        preencheCampos(respJson);
+                    }
+                    
+
+                }
+
+                
+                
+            } catch (error) {
+                
+            }
+
+        }
+        function preencheCampos(respJson){
+            endereco.value = respJson.logradouro;
+            cidade.value = respJson.localidade;
+            estado.value = respJson.uf;
+            bairro.value = respJson.bairro;
+    
+
+        }
+
+
+    </script>
+ 
+
+</body>
+
+</html>

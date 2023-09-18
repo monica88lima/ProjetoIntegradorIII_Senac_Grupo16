@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="icon" href="/Imagens/favicon.ico" />
+    <link rel="stylesheet" href="/css/home_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;700&family=Montserrat:wght@300;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img id="logo" src="/imagens/logo.png" alt="logo">
+            </div>
+
+            <div class="pgnInicio">
+                <span><a href="#cursos">Cursos</a></span>
+                <span><a href="#Inscreva-se">Inscreva-se</a></span>
+                <span><a href="login.html">Login</a></span>
+
+            </div>
+
+        </header>
+
+
+        <main>
+            <div class="containerB">
+                <div class="texto">
+                    <h1>Quer Transformar seu futuro?</h1>
+                    <h5>A graduação é o caminho!</h5>
+
+                    <p>Adquira conhecimento, amplie horizontes, conquiste seu espaço no mercado de trabalho. </p>
+
+                    <p><strong>Não espere mais, inscreva-se agora e comece a trilhar o caminho do sucesso
+                            acadêmico</strong></p>
+                    <div class="btn">
+                        <button class="button" style="vertical-align:middle"><span>Inscreva-se </span></button>
+                    </div>
+                </div>
+
+                <div class="foto">
+                    <aside>
+                        <figure>
+                            <img src="/Imagens/img_telaInicial.png" alt="Formando">
+                        </figure>
+                    </aside>
+                </div>
+
+            </div>
+
+
+    </div>
+
+    </main>
+
+
+
+    </div>
+    <footer class="footer">
+        <p>&copy; Grupo16_ProjetoIntegrador</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+    </script>
+
+    <script>
+
+        const email = document.getElementById('email');
+        const senha = document.getElementById('senha');
+
+        function validaCampos() {
+            if (email.value === "" || senha.value === "") {
+                alert('Email/Senha deve ser preenchido');
+                return false;
+            }
+
+            return true;
+        }
+
+        async function login() {
+            if (!validaCampos())
+                return;
+
+            const data = {
+                'email': email.value,
+                'senha': senha.value
+            }
+
+            try {
+                const resposta = await fetch("api/login", {
+                    method: "POST",
+                    body: data
+                });
+
+                const respJson = await resposta.json();
+
+
+
+            } catch (error) {
+                if (resposta.status === 404) {
+                    alert(respJson.mensagem);
+                    return;
+                }
+                else {
+                    alert("Erro Inesperado!");
+                    return;
+
+                }
+            }
+
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

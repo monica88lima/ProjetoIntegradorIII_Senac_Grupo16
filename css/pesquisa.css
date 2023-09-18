@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.conteinerA {
+
+    height: 100%;
+
+}
+
+body {
+    background-color: rgba(217, 217, 217, 1);
+}
+
+header {
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 16px;
+
+}
+
+.logo,
+.atalhoHome,
+.titulo,
+.nome_tpPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: 'Cabin Condensed', sans-serif;
+
+
+}
+
+.form-control label {
+    width: 8rem;
+}
+
+.nome_tpPerfil {
+    flex-direction: column;
+}
+
+.atalhoHome a {
+    margin-right: 32px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+
+.circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 25px;
+    background-color: #7CBA2C;
+    /* text-align: center; */
+    color: #FFF;
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+
+}
+
+.nome_tpPerfil {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    padding: 8px;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Cabin Condensed', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+
+}
+
+.digitarLupa {
+    width: 800px;
+    height: 45px;
+    border-radius: 20px;
+    background-color: rgba(243, 231, 231, 1);
+    text-transform: uppercase;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-left: 10px;
+
+
+}
+
+.barra {
+    background-color: rgba(151, 148, 148, 1);
+    padding: 15px;
+    width: 100%;
+    font-family: 'Cabin Condensed', sans-serif;
+    gap: 32px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.busca {
+    background-color: #007bff;
+    /* Cor de fundo */
+    color: white;
+    /* Cor do texto */
+    padding: 10px 32px;
+    /* Espaçamento interno (topo/baixo, esquerda/direita) */
+    border: none;
+    /* Remova a borda padrão */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    cursor: pointer;
+
+}
+
+.busca:focus {
+    outline: none;
+    /* Remove a borda de foco padrão */
+    box-shadow: 0 0 5px #007bff;
+}
+
+.busca:hover {
+    background-color: #0056b3;
+    /* Altere a cor de fundo no hover */
+}
+
+
+
+.descricao {
+    padding: 12px;
+}
+
+section {
+    padding: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    padding: 20px;
+    background: rgba(54, 51, 51, 1);
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-family: inherit;
+    bottom: 0;
+    position: fixed;
+
+}
+
+.custom-select {
+    position: relative;
+    width: 100px;
+    overflow: hidden;
+    background-color: rgb(218, 213, 213);
+    border: 1px solid #929090;
+    border-radius: 5px;
+
+}
+
+.custom-select select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.custom-select::after {
+    content: '\f107';
+    font-family: 'Cabin Condensed', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    /* Cor de fundo do ícone */
+    cursor: pointer;
+    color: #fcf7f7;
+    font-size: 14px
+}
+
+.button-consulta {
+    background-color: #007bff;
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    border: none;
+    /* Sem borda */
+    border-radius: 5px;
+    /* Borda arredondada */
+    cursor: pointer;
+    /* Cursor ao passar por cima */
+    font-size: 16px;
+    /* Tamanho da fonte */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.button-consulta:hover {
+    background-color: #0056b3;
+    /* Cor de fundo alterada */
+}
+
+/* Efeito de foco (quando o botão está selecionado) */
+.button-consulta:focus {
+    outline: none;
+    /* Remove a borda de foco padrão do navegador */
+    box-shadow: 0 0 5px #007bff;
+    /* Sombra ao redor do botão */
+}
+
+table,
+td,
+th {
+    border-bottom: 1px solid gray;
+    padding: 25px;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    align-items: center;
+}
+
+.tabela {
+    padding-top: 50px;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
