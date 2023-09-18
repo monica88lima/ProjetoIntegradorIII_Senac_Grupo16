@@ -56,7 +56,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
    * [Como usar](#como-usar)
    * :triangular_flag_on_post: Clique na imagem
   
-   * [![Alt text](https://img.youtube.com/vi/dh9WAxW_mC8/0.jpg)](https://www.youtube.com/watch?v=dh9WAxW_mC8)
+   * [![Alt text](https://img.youtube.com/vi/IiUi1iiyQ3g/0.jpg)](https://youtu.be/IiUi1iiyQ3g)
  
      
    * [Pre Requisitos](#pre-requisitos)
