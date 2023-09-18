@@ -70,7 +70,7 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
   * [Pacotes e Bibliotecas](#Pacotes-e-Bibliotecas)
       :bulb:* 
     - springframework
-    ![springframework](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/springboot.png)
+    ![springframework](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/springboot.png)
 
 ### Features
 
@@ -85,19 +85,19 @@ Cadastro de Pessoa Física ​/ Cadastro de Pessoa Jurídica ​/ Cadastro de Pr
 
 ##Páginas Implemntadas
 
-![Página Inicial](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Home.JPG)
+![Página Inicial](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/Home.JPG)
 
 ![Pagina de Login](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Login.JPG)
 
-![Cadastro Aluno](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroAluno.JPG)
+![Cadastro Aluno](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/CadastroAluno.JPG)
 
-![Menu](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Menu.png)
+![Menu](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/Menu.png)
 
-![Pesquisa](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Pesquisa.png)
+![Pesquisa](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/Pesquisa.png)
 
-![Cadastro Professor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/CadastroProfessor.JPG)
+![Cadastro Professor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/CadastroProfessor.JPG)
 
-![Atualização Cadastral Fornecedor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/monica/pagina_login/PaginasDesenvolvidas_IMG/Atualiza%C3%A7%C3%A3oCadastralFornecedor.JPG)
+![Atualização Cadastral Fornecedor](https://github.com/monica88lima/ProjetoIntegradorIII_Senac_Grupo16/blob/main/PaginasDesenvolvidas_IMG/Atualiza%C3%A7%C3%A3oCadastralFornecedor.JPG)
 
 
 
